@@ -5,7 +5,15 @@ program::main!("p");
 
 fn program() -> program::Result {
     let mut provider: ClipboardContext = ClipboardProvider::new()?;
-    io::stdout().write_all(&provider.get_contents()?.into_bytes())?;
+    io::stdout().write_all(
+        &match provider.get_contents() {
+            Err(e) if e.to_string() == "The operation completed successfully. (os error 0)" => {
+                Ok("".into())
+            },
+            result => result,
+        }?
+        .into_bytes(),
+    )?;
 
     Ok(0)
 }
