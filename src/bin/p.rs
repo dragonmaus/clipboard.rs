@@ -3,7 +3,7 @@ use std::io::{self, Write};
 
 program::main!("p");
 
-fn program() -> program::Result {
+fn program(_name: &str) -> program::Result {
     let mut provider: ClipboardContext = ClipboardProvider::new()?;
     io::stdout().write_all(
         &match provider.get_contents() {

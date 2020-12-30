@@ -3,7 +3,7 @@ use std::io::{self, Read};
 
 program::main!("c");
 
-fn program() -> program::Result {
+fn program(_name: &str) -> program::Result {
     let mut input = String::new();
     io::stdin().read_to_string(&mut input)?;
 

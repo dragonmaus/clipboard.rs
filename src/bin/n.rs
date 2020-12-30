@@ -2,7 +2,7 @@ use clipboard::{ClipboardContext, ClipboardProvider};
 
 program::main!("n");
 
-fn program() -> program::Result {
+fn program(_name: &str) -> program::Result {
     let mut provider: ClipboardContext = ClipboardProvider::new()?;
     provider.set_contents(String::new())?;
 
