@@ -11,4 +11,6 @@ publish = false
 
 [dependencies]
 clipboard = "0.5"
-program = { git = "git://git.dragonma.us/rust/program" }
+
+[dependencies.program]
+git = "git://git.dragonma.us/rust/program"
