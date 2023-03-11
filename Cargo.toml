@@ -1,6 +1,6 @@
 [package]
 name = "clipboard"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["David Wildasin <dragonmaus@posteo.net>"]
 edition = "2018"
 description = "Simple clipboard utilities"
@@ -10,7 +10,7 @@ categories = ["command-line-utilities"]
 publish = false
 
 [dependencies]
-clipboard = "0.5"
+cli-clipboard = "0.4"
 
 [dependencies.program]
 git = "git://git.dragonma.us/rust/program"
