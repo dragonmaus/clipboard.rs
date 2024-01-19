@@ -9,7 +9,7 @@ fn program(_name: &str) -> program::Result {
         &match provider.get_contents() {
             Err(e) if e.to_string() == "The operation completed successfully. (os error 0)" => {
                 Ok("".into())
-            }
+            },
             result => result,
         }?
         .into_bytes(),
