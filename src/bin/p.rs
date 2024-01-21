@@ -7,7 +7,7 @@ fn program(_name: &str) -> program::Result {
     let mut provider: ClipboardContext = ClipboardProvider::new()?;
     io::stdout().write_all(
         &match provider.get_contents() {
-            Err(e) if e.to_string() == "The operation completed successfully. (os error 0)" => {
+            Err(e) if e.to_string() == "OS error 0: The operation completed successfully." => {
                 Ok("".into())
             },
             result => result,
