@@ -1,3 +1,5 @@
+extern crate cli_clipboard;
+
 use cli_clipboard::{ClipboardContext, ClipboardProvider};
 
 program::main!("n");

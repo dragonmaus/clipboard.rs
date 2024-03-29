@@ -1,8 +1,9 @@
 [package]
 name = "clipboard"
-version = "1.0.4"
+version = "1.0.5"
 authors = ["David Wildasin <dragonmaus@posteo.net>"]
-edition = "2021"
+edition = "2018"
+rust-version = "1.46.0"
 description = "Simple clipboard utilities"
 repository = "https://git.dragonma.us/rust/clipboard"
 license = "BSD-3-Clause-Clear"
@@ -11,6 +12,5 @@ publish = false
 
 [dependencies]
 cli-clipboard = "0.4"
-
 [dependencies.program]
 git = "git://git.dragonma.us/rust/program"
